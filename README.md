@@ -1,5 +1,6 @@
 # CSE687 Project 1: Map Reduce
 April 28, 2022
+
 Authors: Todd Hricik, Lyndsay LaBarge
 
 ## Overview
