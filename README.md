@@ -9,4 +9,4 @@ The Visual Studio Solution contains two seperate projects. The MapReduce project
 We used C++ 17 and the boost C++ library (version 1.79). We used the boost Filesystem as opposed to implementating our own file management class.
 
 ## Build
-Both projects use a properties sheet. To build the projects, you will need to change the values of the user macros BoostRoot and BoostLib in MapReduce > PropertySheet.props and UnitTests > PropertySheet.props.
+Both projects use a properties sheet. To build the projects, you will need to change the values of the user macros BoostRoot and BoostLib in MapReduce > PropertySheet.props and UnitTests > PropertySheet.props. By default they are set to C:\Program Files\boost\boost_1_79_0 and C:\Program Files\boost\boost_1_79_0\stage\lib.
