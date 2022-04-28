@@ -143,15 +143,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="executive.h" />
     <ClInclude Include="map.h" />
     <ClInclude Include="reduce.h" />
     <ClInclude Include="sorting.h" />
+    <ClInclude Include="workflow.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="executive.cpp" />
     <ClCompile Include="map.cpp" />
+    <ClCompile Include="mapreduce.cpp" />
     <ClCompile Include="reduce.cpp" />
     <ClCompile Include="sorting.cpp" />
-    <ClCompile Include="test.cpp" />
+    <ClCompile Include="workflow.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

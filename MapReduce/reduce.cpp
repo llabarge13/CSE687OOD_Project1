@@ -8,7 +8,7 @@
 #include <execution>
 #include <iostream>
 #include <boost/random.hpp>
-#include "Reduce.h"
+#include "reduce.h"
 
 Reduce::Reduce(const boost::filesystem::path& directory)
 {

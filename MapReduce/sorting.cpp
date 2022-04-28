@@ -9,7 +9,7 @@
 #include <boost/tokenizer.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
-#include "Sorting.h"
+#include "sorting.h"
 
 // Sort map output from an input file.
 // Input file must have the following format

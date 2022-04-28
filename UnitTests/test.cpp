@@ -9,6 +9,7 @@
 #include "../MapReduce/sorting.h"
 #include "../MapReduce/map.h"
 #include "../MapReduce/reduce.h"
+#include "../MapReduce/workflow.h"
 #include <string>
 #include <array>
 #include <boost/filesystem.hpp>
@@ -235,4 +236,42 @@ TEST(reduceTest, checkReduceOutput) {
     };
 
     reducer_output.close();
+}
+
+// Workflow tests
+TEST(WorkflowTest, testConstructor)
+{
+
+    std::string tar_dir = ".\\shakespeare";
+    std::string inter_dir = ".\\temp2";
+    std::string out_dir = ".\\output";
+
+    Workflow workflow = Workflow(tar_dir, inter_dir, out_dir);
+
+    std::string correct_tar_dir = ".\\shakespeare";
+    boost::filesystem::path tar_path = workflow.getTargetDir();
+    ASSERT_EQ(tar_path.string(), correct_tar_dir);
+
+    std::string correct_inter_dir = ".\\temp2";
+    boost::filesystem::path inter_path = workflow.getIntermediateDir();
+    ASSERT_EQ(inter_path.string(), correct_inter_dir);
+
+    std::string correct_out_dir = ".\\output";
+    boost::filesystem::path out_path = workflow.getOutDir();
+    ASSERT_EQ(out_path.string(), correct_out_dir);
+}
+
+TEST(WorkflowTest, testRun)
+{
+    std::string tar_dir = ".\\shakespeare";
+    std::string inter_dir = ".\\temp2";
+    std::string out_dir = ".\\output";
+
+
+    Workflow workflow = Workflow(tar_dir, inter_dir, out_dir);
+
+    workflow.run();
+    boost::filesystem::path success_file = boost::filesystem::path{ out_dir + "\\SUCCESS" };
+    ASSERT_EQ(boost::filesystem::exists(success_file), true);
+
 }

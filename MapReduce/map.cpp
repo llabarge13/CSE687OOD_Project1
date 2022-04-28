@@ -10,7 +10,7 @@
 #include <boost/tokenizer.hpp>
 #include <boost/algorithm/string.hpp>
 #include <boost/filesystem.hpp>
-#include "Map.h"
+#include "map.h"
 
 Map::Map(const boost::filesystem::path& directory) {
 	output_directory_ = directory;
