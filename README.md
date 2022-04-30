@@ -13,7 +13,7 @@ Both projects use a properties sheet. To build the projects, you will need to ch
 
 ## Usage
 ```
-MapReduce.exe <path of directory containging input files> <directory for intermediate files> <path of dir for output files>.
+MapReduce.exe <path of directory containging input files> <directory for intermediate files> <path of dir for output files>
 ```
 All command line requirements are required. 
 
