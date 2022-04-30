@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
     // check that comand line input is valid
     if (argc != 4)
     {
-        BOOST_LOG_TRIVIAL(fatal) << "./mapreduce <path of dir containging input files> <path of dir for intermediate files> <path of dir for output files>.";
+        BOOST_LOG_TRIVIAL(fatal) << "MapReduce <path of dir containging input files> <path of dir for intermediate files> <path of dir for output files>.";
         return -1;
     }
 

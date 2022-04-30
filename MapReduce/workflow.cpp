@@ -247,4 +247,6 @@ void Workflow::run()
 	for (boost::filesystem::directory_iterator end_dir_it, it(this->intermediate_dir_); it != end_dir_it; ++it) {
 		boost::filesystem::remove_all(it->path());
 	}
+
+	BOOST_LOG_TRIVIAL(info) << "Map reduce process complete.";
 }
